@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
-
-import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { AppShellComponent } from './app-shell/app-shell.component';
+import { InitShellModule } from './init-shell/init-shell.module';
+import { MatProgressSpinnerModule } from '@angular/material';
+import { AppModule } from './app.module';
 
 const routes: Routes = [ { path: 'app-shell-path', component: AppShellComponent }];
 
@@ -13,8 +14,11 @@ const routes: Routes = [ { path: 'app-shell-path', component: AppShellComponent 
     AppModule,
     ServerModule,
     RouterModule.forRoot(routes),
+    InitShellModule,
+    MatProgressSpinnerModule,
   ],
   bootstrap: [AppComponent],
   declarations: [AppShellComponent],
 })
-export class AppServerModule {}
+export class AppServerModule {
+}

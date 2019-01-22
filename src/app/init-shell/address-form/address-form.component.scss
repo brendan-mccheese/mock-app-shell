@@ -1,0 +1,14 @@
+.card-container {
+    display:flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top:1.5rem;
+}
+
+.mat-card {
+    max-width:580px;
+}
+
+.mat-form-field {
+    width:100%;
+}

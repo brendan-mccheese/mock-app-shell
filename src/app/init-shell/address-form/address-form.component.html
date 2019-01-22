@@ -1,0 +1,24 @@
+<app-layout-wrapper>
+  <div class="card-container">
+    <mat-card style="width:50%;">
+      <mat-card-title>
+        <h4 style="text-align:center">Find the address for your next witch</h4>
+      </mat-card-title>
+      <mat-card-content>
+          <form style="padding:2rem">
+            <mat-form-field>
+                <input matInput placeholder="Postcode" value="">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-select>
+                <mat-option value="Foo">Foo</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div style="display:flex;flex-direction: row;justify-content:flex-end">
+              <button mat-flat-button color="primary" type="button" (click)="moveNext()">Continue</button>
+            </div>
+          </form>
+      </mat-card-content>
+    </mat-card>
+</div>
+</app-layout-wrapper>
